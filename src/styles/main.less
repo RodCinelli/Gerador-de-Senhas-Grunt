@@ -1,0 +1,82 @@
+@fontePrincipal: 'Roboto', sans-serif;
+@fonteDoTitulo: 'Lobster', cursive;
+@corDoTexto: #fff;
+@corDeFundo: #4682B4;
+@corDoTextoDoBotao: #000;
+@CorDoFundoDoBotao: #f7b731;
+
+body {
+    background-color: @corDeFundo;
+    font-family: @fontePrincipal;
+    color: @corDoTexto;
+}
+
+h1 {
+    font-family: @fonteDoTitulo;
+    font-size: 3em;
+    
+    // Reduz o tamanho da fonte em dispositivos menores
+    @media (max-width: 768px) {
+        font-size: 2em;
+    }
+}
+
+main {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    text-align: center;
+    
+    // Ajusta a fonte para dispositivos menores
+    @media (max-width: 768px) {
+        font-size: 1.5em;
+    }
+}
+
+button {
+    padding: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 16px;
+    border-radius: 8px;
+    background-color: @CorDoFundoDoBotao;
+    color: @corDoTextoDoBotao;
+    font-family: @fontePrincipal;
+}
+
+input {
+    display: block;
+    margin: 16px auto 0;
+    font-size: 2em;
+    max-width: 120px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    color: @corDoTexto;
+    border-bottom: 6px solid @corDoTexto; 
+    
+    // Ajusta o tamanho da fonte para dispositivos menores
+    @media (max-width: 768px) {
+        font-size: 1.5em;
+    }
+}
+
+.resultado {
+    padding: 16px;
+    margin-top: 120px;
+    border: 8px dotted @corDoTexto;
+    display: none;
+    
+    span {
+        font-weight: bold;
+        font-size: 3em;
+        display: block;
+        
+        // Ajusta o tamanho da fonte para dispositivos menores
+        @media (max-width: 768px) {
+            font-size: 2em;
+        }
+    }
+}
